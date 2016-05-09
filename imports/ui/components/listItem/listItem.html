@@ -1,0 +1,17 @@
+<template name="listItem">
+  <div class="item">
+    <i class="circular green ui avatar image play icon"></i>
+    <div class="content" style="width: 100%; position: relative;">
+      <a class="titleTrack {{#if selected}} {{selected}} {{else}} header {{/if}}">{{track.title}}</a>
+      <div class="description">{{track.author}}</div>
+      <span class="right" style="position: absolute;right: 0;top: 0;padding-top: 5px;padding-right: 10px;">{{seconds}} sec.</span>
+    </div>
+  </div>
+  <iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/francescomarzona/coldplay-viva-la-vida" width="100%" height="465" scrolling="no" frameborder="no"></iframe>
+  <div class="ui hidden negative message" id="message-error">
+    <i class="close icon"></i>
+    <div class="header">
+      We're sorry we can't add more tracks
+    </div>
+  </div>
+</template>

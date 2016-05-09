@@ -1,0 +1,73 @@
+@import '../semantic-ui/semantic.less';
+
+@color-tertiary: white;
+@color-ancillary: blue;
+
+.page.auth {
+  text-align: center;
+
+  .content-scrollable { background: @color-tertiary; }
+
+  .wrapper-auth {
+
+    @media screen and (min-width: 40em) {
+      margin: 0 auto;
+      max-width: 480px;
+      width: 80%;
+    }
+
+    .title-auth {
+
+    }
+
+    .subtitle-auth {
+
+    }
+
+    form {
+      .input {
+        margin-bottom: 1px;
+        width: 100%;
+        display: block;
+
+        input {
+          width: 100%;
+          padding: .75rem;
+        }
+      }
+
+      label {
+        display: none;
+      }
+
+      .btn-primary {
+        margin: 1em 5% 0;
+        width: 90%;
+
+        @media screen and (min-width: 40em) {
+          margin-left: 0;
+          margin-right: 0;
+          width: 100%;
+        }
+      }
+
+      .at-pwd-link {
+        margin-top: 1em;
+      }
+    }
+    .list-errors {
+      margin-top: -2rem;
+      .list-item {
+
+      }
+    }
+
+    .at-message, .at-result {
+
+    }
+  }
+
+  .at-signup-link, .at-signin-link {
+
+  }
+}

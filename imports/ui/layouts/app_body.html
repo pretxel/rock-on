@@ -1,0 +1,77 @@
+<template name="App_body">
+  <div id="container" class="ui container">
+    <div class="ui two column grid">
+      <div class="six wide column">
+
+        <div class="ui raised segment">
+
+          {{#if currentUser}}
+          <!-- <div class="ui compact vertical labeled icon menu"> -->
+
+
+
+          <div class="ui secondary pointing menu">
+            <a class="active item">
+              {{emailLocalPart}}
+            </a>
+            <!-- <a class="item">
+            Messages
+          </a>
+          <a class="item">
+          Friends
+        </a> -->
+        <div class="right menu">
+          <a class="ui item">
+            <a class="js-logout">{{_ 'Logout'}}</a>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="ui large horizontal statistic">
+          <div class="value">
+            {{usersCount}}
+          </div>
+          <div class="label">
+            Users live now
+          </div>
+        </div>
+      </div>
+      <div class="ui large section divider"></div>
+      <div class="row">
+        <div class="ui horizontal statistic">
+          <div class="value">
+            5,000 {{matches}}
+          </div>
+          <div class="label">
+            Score
+          </div>
+        </div>
+      </div>
+
+      <!-- </div> -->
+      {{else}}
+      <div class="ui center aligned basic segment">
+
+        <div class="ui buttons">
+          <a href="{{pathFor 'signin'}}" class="ui orange button">{{_ 'Sign In'}}</a>
+          <div class="or"></div>
+          <a href="{{pathFor 'join'}}" class="ui positive button">{{_ 'Join'}}</a>
+        </div>
+
+</div>
+{{/if}}
+
+</div>
+
+</div>
+
+<div class="ten wide column">
+
+
+  {{> Template.dynamic template=main}}
+
+</div>
+</div>
+</div>
+</template>

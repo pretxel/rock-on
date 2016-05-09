@@ -1,0 +1,69 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+
+
+# meteor
+meteor-base             # Packages every Meteor app needs to have
+mobile-experience       # Packages for a great mobile UX
+tracker                 # Meteor's client-side reactive programming library
+ecmascript              # Enable ECMAScript2015+ syntax in app code
+es5-shim                # ECMAScript 5 compatibility for older browsers.
+check
+
+# only development
+insecure                # Allow all DB writes from clients (for prototyping)
+
+# standart libraries
+jquery                  # Helpful client-side library
+underscore
+
+# data
+mongo                   # The database Meteor supports right now
+aldeed:simple-schema
+aldeed:collection2
+dburles:collection-helpers
+reywood:publish-composite
+mdg:validated-method
+mdg:validation-error
+
+# ui
+blaze-html-templates
+reactive-dict
+reactive-var
+aldeed:template-extension
+percolate:momentum
+semantic:ui
+flemay:less-autoprefixer
+
+# routing
+kadira:flow-router@2.11.0
+kadira:blaze-layout
+arillo:flow-router-helpers
+zimme:active-route
+
+# i18n
+tap:i18n
+
+# accounts
+accounts-password
+useraccounts:unstyled
+useraccounts:flow-routing
+softwarerero:accounts-t9n
+alanning:roles
+mizzao:user-status
+
+# rest apis
+simple:rest-accounts-password
+simple:rest
+
+# production
+standard-minifier-css   # CSS minifier run for production mode
+standard-minifier-js    # JS minifier run for production mode
+peppelg:random-opponent-matcher
+meteorhacks:aggregate
+semantic:ui-progress
+quietcreep:reactive-array

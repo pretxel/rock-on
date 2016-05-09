@@ -1,0 +1,41 @@
+<template name="play">
+
+  <div class="ui raised segment center aligned">
+    <div class="loader-track ui active dimmer">
+      <div class="ui indeterminate text loader">Preparing Files</div>
+    </div>
+
+    <h4 class="ui header">Instructions:</h4>
+    <p>Choose the correct track</p>
+
+    <h3 class="ui header statistic">
+      <div class="value counter">
+        <i class="heartbeat icon"></i> {{time}}
+      </div>
+      <div class="label">
+        Seconds
+      </div>
+    </h3>
+
+    <div class="ui raised segment">
+      <div class="loader-playing ui active dimmer">
+        <div class="ui medium text loader">Playing</div>
+      </div>
+      <br><br><br>
+    </div>
+
+
+
+    <div class="ui raised segments">
+      {{#each answer in answers}}
+      <div class="ui segment">
+        <button class="option fluid ui green basic button" data={{answer._id}}>{{answer.title}}</button>
+      </div>
+      {{/each}}
+    </div>
+
+  </div>
+
+  <iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/francescomarzona/coldplay-viva-la-vida" width="100%" height="465" scrolling="no" frameborder="no"></iframe>
+
+</template>
