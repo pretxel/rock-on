@@ -60,12 +60,15 @@ Template.main.events({
     });
   },
   'click .ready'(event, instance){
+
     var match = Matches.findOne({ $or : [{"user1.id" : Meteor.userId()}, {"user2.id" : Meteor.userId()}] });
     var totalSelected = match.tracks.length;
     if (totalSelected === 6){
       FlowRouter.go('/play/'+instance.matchID.get());
     } else {
-      console.log('Espera por favor');
+      console.log('Espera por favor ');
+
+
       // Wait until other user is ready
     }
   },
@@ -86,6 +89,7 @@ Template.main.helpers({
       instance.matchID.set(match._id);
       instance.state.set('findOpponent', false);
       instance.$("div#progressTracks").progress({percent:instance.percentTotal.get()});
+
       return true;
     }
   },
