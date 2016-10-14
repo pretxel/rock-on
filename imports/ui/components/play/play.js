@@ -5,6 +5,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { Session } from 'meteor/session';
+import { finishGame } from '../../../api/matches/methods.js';
 // import { ReactiveArray } from 'quietcreep/reactive-array';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Matches } from '../../../api/matches/matches.js';
@@ -97,12 +98,13 @@ Template.play.events({
   'click .option'(event, instance) {
 
     let selectedID = $(event.currentTarget).attr("data");
-    if (tracksArray[track]._id === selectedID){
+
+    if (tracksArray[(track + 1)]._id === selectedID){
       console.log('Correct');
     } else {
       console.log('Incorrect');
     }
-    initTimer();
+    initTimer(instance);
 
   },
 });
@@ -139,7 +141,7 @@ var init = function () {
   Session.set('time', clock);
 };
 
-var initTimer = function () {
+var initTimer = function (instance) {
   $('.loader-track').removeClass('disabled');
   $('.loader-track').addClass('active');
   $('.loader-playing').removeClass('active');
@@ -207,6 +209,8 @@ var initTimer = function () {
 
   } else {
     console.log("Finish Game");
+    instance.$('.loader').text('Finish Game');
+    finishGame.call
   }
 };
 

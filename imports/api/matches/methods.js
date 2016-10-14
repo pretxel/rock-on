@@ -7,6 +7,11 @@ const MATCHES_ID_ONLY = new SimpleSchema({
   _id: { type: String },
 }).validator();
 
+const MATCHES_ID_USER = new SimpleSchema({
+  _id: { type: String },
+  user_id: { type: String },
+}).validator();
+
 const MATCHES_ID_WITH_TRACK = new SimpleSchema({
   _id: { type: String },
   track_id: { type: String },
@@ -98,5 +103,19 @@ export const exit = new ValidatedMethod({
   run({_id}){
 
     Matches.update(_id, {$set: { "available" : false }});
+  },
+});
+
+
+export const finishGame = new ValidatedMethod({
+  name: "matches.finishGame",
+  validate: MATCHES_ID_ONLY,
+  run({_id}){
+    var match1 = Matches.findOne({"available" : true, "_id" : _id, "user1.id": Meteor.userId()});
+    var match2 = Matches.findOne({"available" : true, "_id" : _id, "user2.id": Meteor.userId()});
+
+    console.log(match1);
+    console.log(match2);
+
   },
 });

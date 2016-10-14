@@ -67,10 +67,13 @@ Template.main.events({
       FlowRouter.go('/play/'+instance.matchID.get());
     } else {
       console.log('Espera por favor ');
-
-
+      //instance.$('.ui.modal').show();
+      instance.$('.ui.modal').fadeIn('slow');
       // Wait until other user is ready
     }
+  },
+  'click .hide-modal'(event, instance){
+    instance.$('.ui.modal').fadeOut('slow');
   },
 });
 
@@ -128,5 +131,5 @@ Template.main.helpers({
     }else{
       return false;
     }
-  }
+  },
 });
