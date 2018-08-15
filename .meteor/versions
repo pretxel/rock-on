@@ -15,7 +15,6 @@ babel-runtime@1.2.4
 base64@1.0.11
 binary-heap@1.0.10
 blaze@2.3.2
-blaze-html-templates@1.0.5
 blaze-tools@1.0.10
 boilerplate-generator@1.5.0
 caching-compiler@1.1.12
@@ -88,6 +87,7 @@ quietcreep:reactive-array@0.0.7
 raix:eventemitter@0.1.3
 random@1.1.0
 rate-limit@1.0.9
+react-meteor-data@0.2.16
 reactive-dict@1.2.0
 reactive-var@1.0.11
 reload@1.2.0
@@ -114,13 +114,14 @@ spacebars-compiler@1.1.1
 srp@1.0.10
 standard-minifier-css@1.4.1
 standard-minifier-js@2.3.4
+static-html@1.1.13
 tap:i18n@1.8.2
 templating@1.2.15
 templating-compiler@1.2.15
 templating-runtime@1.2.15
 templating-tools@1.1.1
+tmeasday:check-npm-versions@0.3.2
 tracker@1.2.0
-ui@1.0.12
 underscore@1.0.10
 url@1.2.0
 useraccounts:core@1.14.2

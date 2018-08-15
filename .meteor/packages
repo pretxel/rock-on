@@ -31,7 +31,6 @@ mdg:validated-method
 mdg:validation-error
 
 # ui
-blaze-html-templates@1.0.4
 reactive-dict@1.2.0
 reactive-var@1.0.11
 aldeed:template-extension
@@ -69,3 +68,5 @@ semantic:ui-progress
 quietcreep:reactive-array
 shell-server@0.3.1
 dynamic-import@0.4.0
+static-html
+react-meteor-data
